@@ -26,15 +26,16 @@
       <small>DGIST InnoCORE</small>
     </a>
     <nav class="nav-links" aria-label="주 메뉴">
-      <a href="index.html#about">About</a>
-      <a href="index.html#research">Research</a>
-      <a href="index.html#people">People</a>
-      <a href="index.html#achievements">Achievements</a>
-      <a href="index.html#infrastructure">Infrastructure</a>
-      <a href="index.html#news">News</a>
-      <a href="index.html#join">Join Us</a>
-      <a href="index.html#network">Network</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html#about">소개</a>
+      <a href="index.html#research">연구</a>
+      <a href="index.html#people">구성원</a>
+      <a href="index.html#achievements">성과</a>
+      <a href="index.html#infrastructure">인프라</a>
+      <a href="notice.html">공지</a>
+      <a href="seminar.html">세미나</a>
+      <a href="careers.html">채용</a>
+      <a href="index.html#network">네트워크</a>
+      <a href="index.html#contact">문의</a>
     </nav>
     <div class="lang-switch" role="group" aria-label="Language">
       <a href="index.html" hreflang="ko" lang="ko" aria-current="true">KO</a>
@@ -54,7 +55,7 @@
       <p class="hero-subtitle">DGIST와 한국기계연구원이 창발지능 기반 Physical AI 로봇을 만들고, 산업과 의료 두 현장에서 함께 검증합니다.</p>
       <div class="cta-buttons">
         <a class="btn primary" href="#research">연구 보기</a>
-        <a class="btn secondary" href="#join">Fellow 지원</a>
+        <a class="btn secondary" href="careers.html">Fellow 지원</a>
         <a class="btn secondary" href="#contact">문의하기</a>
       </div>
     </div>
@@ -150,59 +151,38 @@
   </div>
 </section>
 
-<!-- News -->
-<section class="section bg-light" id="news">
+<!-- Notice -->
+<section class="section bg-light" id="notice">
   <div class="container">
-    <h2 class="section-title">News</h2>
-    <p class="section-desc">연구단 소식을 매월 업데이트합니다.</p>
-    <ul class="news-list">
-      <li class="news-item"><span class="news-date">2026.10</span><span>연구단 홈페이지를 열었습니다.</span></li>
-      <li class="news-item"><span class="news-date">2026.07</span><span>창발지능 Physical AI 연구단이 출범했습니다. DGIST와 한국기계연구원 연구진이 1차년도 연구를 시작했습니다.</span></li>
-      <li class="news-item"><span class="news-date">상시</span><span>InnoCORE Fellow(박사후연구원)를 모집합니다. <a href="#join">자세히 보기 →</a></span></li>
-    </ul>
+    <h2 class="section-title">Notices</h2>
+    <p class="section-desc">연구단 공지를 게시합니다.</p>
+    <ul class="news-list" data-render="notice-list" data-limit="3"></ul>
+    <p class="section-more"><a class="btn secondary" href="notice.html">공지 전체 보기</a></p>
   </div>
 </section>
 
-<!-- Join Us -->
-<section class="section" id="join">
+<!-- Seminar -->
+<section class="section" id="seminar">
   <div class="container">
-    <h2 class="section-title">Join Us</h2>
+    <h2 class="section-title">Seminars</h2>
+    <p class="section-desc">연구단 세미나와 워크숍 일정을 안내합니다.</p>
+    <div class="list-wrap" data-render="seminar-list" data-limit="3"></div>
+    <p class="section-more"><a class="btn secondary" href="seminar.html">세미나 전체 보기</a></p>
+  </div>
+</section>
+
+<!-- Careers -->
+<section class="section bg-light" id="join">
+  <div class="container">
+    <h2 class="section-title">Careers</h2>
     <p class="section-desc">InnoCORE Fellow(박사후연구원) 10명을 모집합니다. Fellow는 특정 연구실에 소속되지 않고 5개 세부과제를 순환하며 핵심기술부터 응용, 실증까지 전주기 연구에 참여합니다.</p>
-    <div class="card-grid">
-      <div class="info-card">
-        <h3>세부과제 순환 연구</h3>
-        <p class="meta">특정 분야에 고정되지 않고 세부과제 사이를 순환하며 연구그룹과 상시 협업합니다. Fellow 중 3명은 한국기계연구원에 파견되어 산업 실증 연구를 수행합니다.</p>
-      </div>
-      <div class="info-card">
-        <h3>멀티 멘토링</h3>
-        <p class="meta">DGIST 학과(창발지능·시스템 통합), 한국기계연구원(산업·의료 로봇 하드웨어), DGIST 연구부서(의료 로봇·응용), 해외 협력기관의 글로벌 석학이 함께 멘토링합니다.</p>
-      </div>
-      <div class="info-card">
-        <h3>연구 지원 환경</h3>
-        <p class="meta">통합 연구공간과 실험 인프라(GPU 서버, 테스트베드)를 쓰고, 국제 학술활동과 해외 연구교류를 지원받습니다. 행정·연구 지원 체계로 연구에 집중할 수 있습니다.</p>
-      </div>
-    </div>
-    <div class="themes">
-      <h3>연구 테마</h3>
-      <ul class="theme-list">
-        <li><b>F01</b>창발지능 AI 알고리즘</li>
-        <li><b>F02</b>시스템 통합 아키텍처</li>
-        <li><b>F03</b>센서·구동 모듈</li>
-        <li><b>F04</b>산업 환경 적응형 로봇</li>
-        <li><b>F05</b>산업 자율 작업</li>
-        <li><b>F06</b>인간·로봇 협업</li>
-        <li><b>F07</b>의료 로봇 수술 보조</li>
-        <li><b>F08</b>환자 모니터링·위험 예측</li>
-        <li><b>F09</b>통합 실증·성능 검증</li>
-        <li><b>F10</b>기계연 파견 (산업 실증)</li>
-      </ul>
-      <p class="section-note">공식 모집 공고 링크는 확정 후 게시합니다.</p>
-    </div>
+    <div data-render="career-list"></div>
+    <p class="section-more"><a class="btn secondary" href="careers.html">채용 안내 보기</a></p>
   </div>
 </section>
 
 <!-- Global Network -->
-<section class="section bg-light" id="network">
+<section class="section" id="network">
   <div class="container">
     <h2 class="section-title">Global Network</h2>
     <p class="section-desc">연구진의 국제 공동연구 네트워크를 Fellow 멘토링과 공동연구에 활용합니다. 기관명은 협력기관의 동의를 받은 뒤 공개합니다.</p>
@@ -223,7 +203,7 @@
     <div class="contact-wrapper">
       <div class="info-item">
         <span class="icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-        <div><h3>Email</h3><p>연구단 대표 메일 개설 예정</p></div>
+        <div><h3>Email</h3><p><a href="mailto:mech@dgist.ac.kr">mech@dgist.ac.kr</a></p><p class="contact-note">연구단장 윤동원 교수 · 연구단 대표 메일 개설 전 임시 연락처</p></div>
       </div>
       <div class="info-item">
         <span class="icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>

@@ -350,4 +350,43 @@ window.SITE = {
         { src: 'assets/img/infra/kimm-02.webp', caption: '로봇응용연구실' },
       ] },
   ],
+  // 공지: 위에서부터 보입니다(상시 공지 → 최신 글 순). link가 있으면 제목이 그 페이지로 연결됩니다.
+  // 영문은 data.en.js notices 에 같은 id로 넣습니다. 영문이 없으면 영문 페이지에도 한국어로 보입니다.
+  notices: [
+    { id: 'fellow-recruit', date: '상시', title: 'InnoCORE Fellow(박사후연구원) 상시 모집', link: 'careers.html' },
+    { id: 'site-open', date: '2026.10', title: '연구단 홈페이지 개설' },
+    { id: 'launch', date: '2026.07', title: '창발지능 Physical AI 연구단 출범 및 1차년도 연구 착수' },
+  ],
+
+  // 세미나: { id, date: 'YYYY.MM.DD', time: '16:00', title, speaker, affiliation, place, link } (영문은 data.en.js에 같은 id로)
+  // 날짜가 지나면 '지난 세미나'로 옮겨 보입니다.
+  seminars: [],
+
+  // 채용 공고. link에 공식 공고 주소를 넣으면 '공고 보기' 버튼이 생깁니다. contact는 지원·문의 메일(현재 연구단장 임시 연락처).
+  careers: [
+    { id: 'fellow', title: 'InnoCORE Fellow (박사후연구원)', status: '모집 중', count: '10명', period: '상시',
+      summary: '5개 세부과제 순환 연구 · 멀티 멘토링 · 한국기계연구원 파견(3명)', link: '',
+      contact: 'mech@dgist.ac.kr' },
+  ],
+
+  // 채용 안내: 메인의 Careers 섹션과 채용 페이지에 함께 보입니다.
+  careerInfo: {
+    cards: [
+      { title: '세부과제 순환 연구', text: '특정 분야에 고정되지 않고 세부과제 사이를 순환하며 연구그룹과 상시 협업합니다. Fellow 중 3명은 한국기계연구원에 파견되어 산업 실증 연구를 수행합니다.' },
+      { title: '멀티 멘토링', text: 'DGIST 학과(창발지능·시스템 통합), 한국기계연구원(산업·의료 로봇 하드웨어), DGIST 연구부서(의료 로봇·응용), 해외 협력기관의 글로벌 석학이 함께 멘토링합니다.' },
+      { title: '연구 지원 환경', text: '통합 연구공간과 실험 인프라(GPU 서버, 테스트베드)를 쓰고, 국제 학술활동과 해외 연구교류를 지원받습니다. 행정·연구 지원 체계로 연구에 집중할 수 있습니다.' },
+    ],
+    themes: [
+      { code: 'F01', text: '창발지능 AI 알고리즘' },
+      { code: 'F02', text: '시스템 통합 아키텍처' },
+      { code: 'F03', text: '센서·구동 모듈' },
+      { code: 'F04', text: '산업 환경 적응형 로봇' },
+      { code: 'F05', text: '산업 자율 작업' },
+      { code: 'F06', text: '인간·로봇 협업' },
+      { code: 'F07', text: '의료 로봇 수술 보조' },
+      { code: 'F08', text: '환자 모니터링·위험 예측' },
+      { code: 'F09', text: '통합 실증·성능 검증' },
+      { code: 'F10', text: '한국기계연구원 파견 (산업 실증)' },
+    ],
+  },
 };

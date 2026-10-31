@@ -936,5 +936,78 @@ window.SITE_EN = {
         }
       ]
     }
-  ]
+  ],
+  "notices": [
+    { "id": "fellow-recruit", "date": "Rolling", "title": "Rolling recruitment of InnoCORE Fellows (postdoctoral researchers)" },
+    { "id": "site-open", "date": "2026.10", "title": "Center website opened" },
+    { "id": "launch", "date": "2026.07", "title": "Emergent Intelligence Physical AI Research Center launched and first-year research begun" }
+  ],
+  "careers": [
+    {
+      "id": "fellow",
+      "title": "InnoCORE Fellow (postdoctoral researcher)",
+      "status": "Open",
+      "count": "10",
+      "period": "Rolling",
+      "summary": "Rotation across the five subprojects · mentoring by multiple experts · secondment to KIMM (3 Fellows)"
+    }
+  ],
+  "careerInfo": {
+    "cards": [
+      {
+        "title": "Rotation across subprojects",
+        "text": "Rather than staying in one field, Fellows rotate between subprojects and work with the research groups on an ongoing basis. Three Fellows will be seconded to KIMM for industrial validation research."
+      },
+      {
+        "title": "Multiple mentors",
+        "text": "Fellows are mentored jointly by DGIST departments (emergent intelligence and system integration), KIMM (industrial and medical robot hardware), DGIST research divisions (medical robotics and applications), and leading international scholars at overseas partner institutions."
+      },
+      {
+        "title": "Research support",
+        "text": "Fellows have access to an integrated research space and experimental infrastructure (GPU servers, testbeds) and receive support for international academic activities and overseas research exchanges. Administrative and research support systems let them focus on their research."
+      }
+    ],
+    "themes": [
+      {
+        "code": "F01",
+        "text": "Emergent intelligence AI algorithms"
+      },
+      {
+        "code": "F02",
+        "text": "System integration architecture"
+      },
+      {
+        "code": "F03",
+        "text": "Sensing and actuation modules"
+      },
+      {
+        "code": "F04",
+        "text": "Adaptive industrial robots"
+      },
+      {
+        "code": "F05",
+        "text": "Autonomous industrial tasks"
+      },
+      {
+        "code": "F06",
+        "text": "Human-robot collaboration"
+      },
+      {
+        "code": "F07",
+        "text": "Robotic surgical assistance"
+      },
+      {
+        "code": "F08",
+        "text": "Patient monitoring and risk prediction"
+      },
+      {
+        "code": "F09",
+        "text": "Integrated validation and testing"
+      },
+      {
+        "code": "F10",
+        "text": "Secondment to KIMM (industrial validation)"
+      }
+    ]
+  }
 };

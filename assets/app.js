@@ -38,6 +38,11 @@
       cv: 'CV 보기', cvSoon: 'CV 준비 중', sampleNote: '화면 구성을 보여 주는 예시 프로필입니다. 실제 인물이 아닙니다.',
       mentors: '멘토', fellowCareer: '경력', outputs: '연구 성과',
       infraMore: n => `인프라 사진 보기 (${n}) →`, equipment: '주요 장비', photosSoon: '사진을 준비하고 있습니다.',
+      noticeEmpty: '등록된 공지가 없습니다.',
+      upcoming: '예정된 세미나', past: '지난 세미나', speaker: '연사', place: '장소',
+      seminarEmpty: '예정된 세미나가 없습니다. 일정이 정해지면 이곳에 안내합니다.',
+      jobCount: '모집 인원', jobPeriod: '모집 기간', jobContact: '지원·문의', jobLink: '공고 보기', jobLinkSoon: '공식 모집 공고 링크는 확정 후 게시합니다.',
+      careersEmpty: '현재 진행 중인 채용이 없습니다.', themes: '연구 테마',
     },
     en: {
       center: 'Emergent Intelligence Physical AI Research Center',
@@ -55,6 +60,11 @@
       cv: 'View CV', cvSoon: 'CV coming soon', sampleNote: 'This is a sample profile showing the page layout. It is not a real person.',
       mentors: 'Mentors', fellowCareer: 'Career', outputs: 'Research outputs',
       infraMore: n => `View photos (${n}) →`, equipment: 'Key equipment', photosSoon: 'Photos are being prepared.',
+      noticeEmpty: 'No notices yet.',
+      upcoming: 'Upcoming seminars', past: 'Past seminars', speaker: 'Speaker', place: 'Venue',
+      seminarEmpty: 'No seminars are scheduled yet. Dates will be announced here.',
+      jobCount: 'Positions', jobPeriod: 'Application period', jobContact: 'Applications and inquiries', jobLink: 'View the official call', jobLinkSoon: 'The official call for applications will be linked here once it is published.',
+      careersEmpty: 'There are no open positions at the moment.', themes: 'Research themes',
     },
   }[LANG];
 
@@ -292,6 +302,59 @@
           </div>
         </section>`).join('');
     },
+
+    // data-limit shows only the latest entries (home page)
+    'notice-list'(el) {
+      const list = S.notices.slice(0, +el.dataset.limit || undefined);
+      el.innerHTML = list.length ? list.map(x => `
+        <li class="news-item"><span class="news-date">${esc(x.date)}</span><span>${x.link ? `<a href="${esc(x.link)}">${esc(x.title)}</a>` : esc(x.title)}</span></li>`).join('')
+        : `<li class="placeholder">${T.noticeEmpty}</li>`;
+    },
+
+    'seminar-list'(el) {
+      const d = new Date();
+      const today = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, '0'), String(d.getDate()).padStart(2, '0')].join('.');
+      const upcoming = S.seminars.filter(s => s.date >= today).sort((a, b) => a.date.localeCompare(b.date));
+      const past = S.seminars.filter(s => s.date < today).sort((a, b) => b.date.localeCompare(a.date));
+      const item = s => {
+        const who = s.speaker ? `${T.speaker} ${s.speaker}${s.affiliation ? ` (${s.affiliation})` : ''}` : '';
+        const title = s.link ? `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title);
+        return `<li class="news-item"><span class="news-date">${esc(s.date)}${s.time ? `<small>${esc(s.time)}</small>` : ''}</span>
+          <div><h4 class="seminar-title">${title}</h4><p class="meta">${esc([who, s.place && `${T.place} ${s.place}`].filter(Boolean).join(' · '))}</p></div></li>`;
+      };
+      const list = items => `<ul class="news-list">${items.map(item).join('')}</ul>`;
+      const empty = `<div class="placeholder">${T.seminarEmpty}</div>`;
+      if (el.dataset.limit) {
+        const items = upcoming.concat(past).slice(0, +el.dataset.limit);
+        el.innerHTML = items.length ? list(items) : empty;
+        return;
+      }
+      el.innerHTML = `<h3 class="block-title">${T.upcoming}</h3>${upcoming.length ? list(upcoming) : empty}`
+        + (past.length ? `<h3 class="block-title">${T.past}</h3>${list(past)}` : '');
+    },
+
+    'career-list'(el) {
+      el.innerHTML = S.careers.length ? S.careers.map(j => `
+        <article class="job">
+          <div class="job-head"><span class="badge now">${esc(j.status)}</span><h3>${esc(j.title)}</h3></div>
+          <dl class="job-meta"><dt>${T.jobCount}</dt><dd>${esc(j.count)}</dd><dt>${T.jobPeriod}</dt><dd>${esc(j.period)}</dd>
+            ${j.contact ? `<dt>${T.jobContact}</dt><dd><a href="mailto:${esc(j.contact)}">${esc(j.contact)}</a></dd>` : ''}</dl>
+          ${j.summary ? `<p class="meta">${esc(j.summary)}</p>` : ''}
+          ${j.link ? `<a class="btn primary" href="${esc(j.link)}" target="_blank" rel="noopener">${T.jobLink}</a>` : `<p class="job-note">${T.jobLinkSoon}</p>`}
+        </article>`).join('') : `<div class="placeholder">${T.careersEmpty}</div>`;
+    },
+
+    'career-info'(el) {
+      const c = S.careerInfo;
+      el.innerHTML = `
+        <div class="card-grid">${c.cards.map(x => `
+          <div class="info-card"><h3>${esc(x.title)}</h3><p class="meta">${esc(x.text)}</p></div>`).join('')}
+        </div>
+        <div class="themes">
+          <h3>${T.themes}</h3>
+          <ul class="theme-list">${c.themes.map(t => `<li><b>${esc(t.code)}</b>${esc(t.text)}</li>`).join('')}</ul>
+        </div>`;
+    },
   };
 
   document.querySelectorAll('[data-render]').forEach(el => {
@@ -299,11 +362,18 @@
     if (fn) fn(el);
   });
 
-  // the language switch opens the same page (with its query and anchor) in the other language
   const page = location.pathname.split('/').pop() || 'index.html';
+  // sub pages light up the home-page menu item they belong to
+  const navFor = { 'research.html': 'index.html#research', 'people.html': 'index.html#people', 'professor.html': 'index.html#people',
+    'fellow.html': 'index.html#people', 'infrastructure.html': 'index.html#infrastructure' }[page] || page;
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    if (a.getAttribute('href') === navFor) a.setAttribute('aria-current', 'page');
+  });
+
+  // the language switch opens the same page (with its query and anchor) in the other language
   document.querySelectorAll('.lang-switch a[hreflang]').forEach(a => {
-    if (a.getAttribute('aria-current')) return;
-    a.href = (LANG === 'en' ? '../' : 'en/') + page + location.search + location.hash;
+    const here = a.getAttribute('aria-current');
+    a.href = (here ? '' : LANG === 'en' ? '../' : 'en/') + page + location.search + location.hash;
   });
 
   // anchors to blocks that were just rendered need a manual jump

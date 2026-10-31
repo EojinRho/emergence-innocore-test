@@ -184,6 +184,9 @@ ul { list-style: none; }
 }
 .info-item h3 { color: #fff; font-size: 1rem; margin-bottom: 4px; }
 .info-item p { color: #cbd5e1; font-size: 15px; }
+.info-item a { color: #93c5fd; font-weight: 600; }
+.info-item a:hover { color: #fff; }
+.info-item .contact-note { font-size: 13px; color: #94a3b8; }
 
 /* footer */
 footer { background: #020617; color: #94a3b8; padding: 30px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 14px; }
@@ -383,9 +386,42 @@ a.info-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .lang-switch a[aria-current="true"] { background: var(--primary); color: #fff; }
 /* the English logo is longer, so tighten the menu to keep it on one row */
 html[lang="en"] .logo b { font-size: 16px; }
-html[lang="en"] .nav-links { gap: 2px 18px; }
+html[lang="en"] .nav-links { gap: 2px 12px; }
+html[lang="en"] .nav-links a { font-size: 14px; }
 @media (max-width: 992px) {
   .navbar .container { position: relative; }
   .lang-switch { position: absolute; top: 12px; right: 20px; }
   .logo { padding-right: 110px; }
+}
+
+/* notice, seminar and careers (required menus) */
+.nav-links a[aria-current="page"] { color: var(--primary); border-bottom-color: var(--primary); }
+.list-wrap { max-width: 800px; margin: 0 auto; }
+.section-more { margin-top: 36px; text-align: center; }
+.news-list .placeholder { list-style: none; }
+.news-date small { display: block; font-weight: 500; color: var(--light-text); }
+.seminar-title { font-size: 1rem; margin-bottom: 2px; }
+.seminar-title a { color: inherit; }
+.job { margin: 0 0 40px; padding: 28px 32px; background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--primary); border-radius: 16px; box-shadow: var(--shadow-sm); }
+.job-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 14px; }
+.job-head .badge.now { margin-left: 0; }
+.job-head h3 { font-size: 1.25rem; }
+.job-meta { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin-bottom: 12px; font-size: 15px; }
+.job-meta dt { font-weight: 600; color: var(--secondary); }
+.job-note { margin-top: 14px; font-size: 13px; color: var(--light-text); }
+@media (max-width: 600px) { .job { padding: 24px 20px; } }
+.list-wrap > .block-title:first-child { margin-top: 0; }
+.news-item .meta, .job .meta { font-size: 14px; color: var(--light-text); }
+.seminar-title a { color: var(--primary); }
+.job-meta a { color: var(--primary); font-weight: 600; }
+/* the longer English menu goes under the logo below 1200px instead of wrapping beside it */
+@media (max-width: 1200px) and (min-width: 993px) {
+  html[lang="en"] { scroll-padding-top: 120px; }
+  html[lang="en"] .navbar .container { position: relative; flex-direction: column; align-items: stretch; gap: 4px; padding-top: 12px; }
+  html[lang="en"] .nav-links { padding-bottom: 8px; }
+  html[lang="en"] .lang-switch { position: absolute; top: 12px; right: 20px; }
+}
+@media (max-width: 600px) {
+  .theme-list { justify-content: flex-start; }
+  .theme-list li { border-radius: 12px; }
 }

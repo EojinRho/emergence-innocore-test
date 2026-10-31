@@ -31,8 +31,9 @@
       <a href="index.html#people">People</a>
       <a href="index.html#achievements">Achievements</a>
       <a href="index.html#infrastructure">Infrastructure</a>
-      <a href="index.html#news">News</a>
-      <a href="index.html#join">Join Us</a>
+      <a href="notice.html">Notices</a>
+      <a href="seminar.html">Seminars</a>
+      <a href="careers.html">Careers</a>
       <a href="index.html#network">Network</a>
       <a href="index.html#contact">Contact</a>
     </nav>
@@ -54,7 +55,7 @@
       <p class="hero-subtitle">DGIST and the Korea Institute of Machinery &amp; Materials (KIMM) are building Physical AI robots based on emergent intelligence and validating them together in two settings: industry and healthcare.</p>
       <div class="cta-buttons">
         <a class="btn primary" href="#research">Explore research</a>
-        <a class="btn secondary" href="#join">Apply as a Fellow</a>
+        <a class="btn secondary" href="careers.html">Apply as a Fellow</a>
         <a class="btn secondary" href="#contact">Contact us</a>
       </div>
     </div>
@@ -150,59 +151,38 @@
   </div>
 </section>
 
-<!-- News -->
-<section class="section bg-light" id="news">
+<!-- Notice -->
+<section class="section bg-light" id="notice">
   <div class="container">
-    <h2 class="section-title">News</h2>
-    <p class="section-desc">News from the Center, updated monthly.</p>
-    <ul class="news-list">
-      <li class="news-item"><span class="news-date">2026.10</span><span>The Center website has launched.</span></li>
-      <li class="news-item"><span class="news-date">2026.07</span><span>The Emergent Intelligence Physical AI Research Center was launched. Researchers from DGIST and KIMM began the first year of research.</span></li>
-      <li class="news-item"><span class="news-date">Ongoing</span><span>We are recruiting InnoCORE Fellows (postdoctoral researchers). <a href="#join">Learn more →</a></span></li>
-    </ul>
+    <h2 class="section-title">Notices</h2>
+    <p class="section-desc">Announcements from the Center.</p>
+    <ul class="news-list" data-render="notice-list" data-limit="3"></ul>
+    <p class="section-more"><a class="btn secondary" href="notice.html">View all notices</a></p>
   </div>
 </section>
 
-<!-- Join Us -->
-<section class="section" id="join">
+<!-- Seminar -->
+<section class="section" id="seminar">
   <div class="container">
-    <h2 class="section-title">Join Us</h2>
+    <h2 class="section-title">Seminars</h2>
+    <p class="section-desc">Upcoming seminars and workshops at the Center.</p>
+    <div class="list-wrap" data-render="seminar-list" data-limit="3"></div>
+    <p class="section-more"><a class="btn secondary" href="seminar.html">View all seminars</a></p>
+  </div>
+</section>
+
+<!-- Careers -->
+<section class="section bg-light" id="join">
+  <div class="container">
+    <h2 class="section-title">Careers</h2>
     <p class="section-desc">We are recruiting 10 InnoCORE Fellows (postdoctoral researchers). Fellows are not assigned to a single lab: they rotate through the five subprojects and take part in the full research cycle, from core technology through application to validation.</p>
-    <div class="card-grid">
-      <div class="info-card">
-        <h3>Rotation across subprojects</h3>
-        <p class="meta">Rather than staying in one field, Fellows rotate between subprojects and work with the research groups on an ongoing basis. Three of the Fellows are seconded to KIMM to conduct industrial validation research.</p>
-      </div>
-      <div class="info-card">
-        <h3>Multi-mentoring</h3>
-        <p class="meta">Fellows are mentored jointly by DGIST departments (emergent intelligence and system integration), KIMM (industrial and medical robot hardware), DGIST research divisions (medical robotics and applications), and leading international scholars at overseas partner institutions.</p>
-      </div>
-      <div class="info-card">
-        <h3>Research support</h3>
-        <p class="meta">Fellows have access to an integrated research space and experimental infrastructure (GPU servers, testbeds) and receive support for international academic activities and overseas research exchanges. Administrative and research support systems let them focus on their research.</p>
-      </div>
-    </div>
-    <div class="themes">
-      <h3>Research themes</h3>
-      <ul class="theme-list">
-        <li><b>F01</b>Emergent intelligence AI algorithms</li>
-        <li><b>F02</b>System integration architecture</li>
-        <li><b>F03</b>Sensing and actuation modules</li>
-        <li><b>F04</b>Adaptive robots for industrial environments</li>
-        <li><b>F05</b>Autonomous industrial tasks</li>
-        <li><b>F06</b>Human-robot collaboration</li>
-        <li><b>F07</b>Surgical assistance with medical robots</li>
-        <li><b>F08</b>Patient monitoring and risk prediction</li>
-        <li><b>F09</b>Integrated validation and performance verification</li>
-        <li><b>F10</b>Secondment to KIMM (industrial validation)</li>
-      </ul>
-      <p class="section-note">A link to the official call for applications will be posted once it is finalized.</p>
-    </div>
+    <div data-render="career-list"></div>
+    <p class="section-more"><a class="btn secondary" href="careers.html">View open positions</a></p>
   </div>
 </section>
 
 <!-- Global Network -->
-<section class="section bg-light" id="network">
+<section class="section" id="network">
   <div class="container">
     <h2 class="section-title">Global Network</h2>
     <p class="section-desc">We draw on our researchers' international collaboration networks for Fellow mentoring and joint research. Partner institutions will be named once they have given their consent.</p>
@@ -223,7 +203,7 @@
     <div class="contact-wrapper">
       <div class="info-item">
         <span class="icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-        <div><h3>Email</h3><p>Center email address coming soon</p></div>
+        <div><h3>Email</h3><p><a href="mailto:mech@dgist.ac.kr">mech@dgist.ac.kr</a></p><p class="contact-note">Prof. Dongwon Yun, Center Director · temporary contact until the center email address is set up</p></div>
       </div>
       <div class="info-item">
         <span class="icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
