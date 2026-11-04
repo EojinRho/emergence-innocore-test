@@ -11,7 +11,7 @@ window.SITE_EN = {
     {
       "id": "dgist-div",
       "name": "DGIST research divisions",
-      "desc": "Division of Intelligent Robot · Division of Biomedical Technology: validation in medical settings and incorporation of clinical needs"
+      "desc": "Division of Intelligent Robot · AX Research Group for Robotics · Division of Biomedical Technology: validation in medical settings and incorporation of clinical needs"
     },
     {
       "id": "kimm",

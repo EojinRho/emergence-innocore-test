@@ -5,7 +5,7 @@
 window.SITE = {
   groups: [
     { id: 'dgist-dept', name: 'DGIST 학과', desc: '로봇및기계전자공학과 · 전기전자컴퓨터공학과 — 연구단 총괄, 창발지능 알고리즘, 시스템 통합' },
-    { id: 'dgist-div', name: 'DGIST 연구부서', desc: '지능형로봇연구부 · 바이오메디컬연구부 — 의료 환경 실증과 임상 요구 반영' },
+    { id: 'dgist-div', name: 'DGIST 연구부서', desc: '지능형로봇연구부 · 로봇AX연구단 · 바이오메디컬연구부 — 의료 환경 실증과 임상 요구 반영' },
     { id: 'kimm', name: '한국기계연구원', desc: '대전 본원 · 대구 — 산업·의료 로봇 부품·모듈 개발과 실증' },
   ],
 
@@ -231,7 +231,8 @@ window.SITE = {
 
   // InnoCORE Fellows
   fellows: [
-    { id: 'prada-john', name: 'John Prada', subs: [1], keyword: '자율 로봇 조작·파지를 위한 강화학습 및 지능형 의사결정', mentors: ['lee-hyunki'],
+    { id: 'prada-john', name: 'John Prada', subs: [4], keyword: '자율 로봇 조작·파지를 위한 강화학습 및 지능형 의사결정', mentors: ['lee-hyunki'],
+      cv: 'assets/cv/prada-john.pdf',
       career: [
         { period: '2026 –', text: 'InnoCORE Fellow, DGIST' },
         { period: '2024 – 2026', text: 'DGIST 박사후연구원' },
@@ -240,7 +241,7 @@ window.SITE = {
         { period: '2010 – 2015', text: '누에바 그라나다 군사대학교(콜롬비아) 메카트로닉스공학 학사' },
       ],
       outputs: [] },
-    { id: 'shirzad-masoud', name: '시르자드 마수드', subs: [1], keyword: '소프트 로보틱스, 인공지능 및 머신러닝, 로봇 메타물질', mentors: ['park-joonhyuk'],
+    { id: 'shirzad-masoud', name: '시르자드 마수드', subs: [5], keyword: '소프트 로보틱스, 인공지능 및 머신러닝, 로봇 메타물질', mentors: ['park-joonhyuk'],
       photo: 'assets/img/people/shirzad-masoud.webp', cv: 'assets/cv/shirzad-masoud.pdf',
       career: [
         { period: '2026.08 –', text: 'InnoCORE Fellow, DGIST' },
@@ -254,7 +255,7 @@ window.SITE = {
         'Shirzad M, Bodaghi M, Oh D, Yi M, Nam SY. Design and optimization of bioinspired auxetic structure for biomedical applications. European Journal of Mechanics-A/Solids. 2024 Jan 1;103:105139.',
       ] },
     { id: 'jeon-hyeonjae', name: '전현재', subs: [1], keyword: '비전-언어-행동(VLA) 모델', mentors: ['jin-yongsik'],
-      photo: 'assets/img/people/jeon-hyeonjae.webp',
+      photo: 'assets/img/people/jeon-hyeonjae.webp', cv: 'assets/cv/jeon-hyeonjae.pdf',
       career: [
         { period: '2026 –', text: 'InnoCORE Fellow, DGIST' },
         { period: '2021 – 2026', text: 'DGIST 로봇및기계전자공학과 박사' },
