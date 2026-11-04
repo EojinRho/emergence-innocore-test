@@ -379,7 +379,7 @@ a.info-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 /* full-width portrait like the DGIST department faculty cards */
 .person-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
 .profile { grid-template-columns: 220px 1fr; }
-@media (max-width: 767px) { .profile-photo { max-width: 220px; } .person-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 767px) { .profile { grid-template-columns: 1fr; } .profile-photo { max-width: 220px; } .person-grid { grid-template-columns: repeat(2, 1fr); } }
 .actions { flex-wrap: wrap; }
 .btn-sm { flex: 1 1 auto; white-space: nowrap; }
 

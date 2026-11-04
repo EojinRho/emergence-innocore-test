@@ -36,7 +36,7 @@
       source: '출처: 연구단 발표자료(2026.05). 게재 전 본인 확인을 받습니다.',
       fellowNotFound: '해당 Fellow를 찾을 수 없습니다.', backFellows: '목록으로',
       cv: 'CV 보기', cvSoon: 'CV 준비 중', sampleNote: '화면 구성을 보여 주는 예시 프로필입니다. 실제 인물이 아닙니다.',
-      mentors: '멘토', fellowCareer: '경력', outputs: '연구 성과',
+      mentor: '멘토', mentors: '멘토', fellowCareer: '경력', outputs: '연구 성과',
       infraMore: n => `인프라 사진 보기 (${n}) →`, equipment: '주요 장비', photosSoon: '사진을 준비하고 있습니다.',
       noticeEmpty: '등록된 공지가 없습니다.',
       upcoming: '예정된 세미나', past: '지난 세미나', speaker: '연사', place: '장소',
@@ -58,7 +58,7 @@
       source: 'Source: Research center presentation (May 2026). Each entry is confirmed by the researcher before publication.',
       fellowNotFound: 'Fellow not found.', backFellows: 'Back to the list',
       cv: 'View CV', cvSoon: 'CV coming soon', sampleNote: 'This is a sample profile showing the page layout. It is not a real person.',
-      mentors: 'Mentors', fellowCareer: 'Career', outputs: 'Research outputs',
+      mentor: 'Mentor', mentors: 'Mentors', fellowCareer: 'Career', outputs: 'Research outputs',
       infraMore: n => `View photos (${n}) →`, equipment: 'Key equipment', photosSoon: 'Photos are being prepared.',
       noticeEmpty: 'No notices yet.',
       upcoming: 'Upcoming seminars', past: 'Past seminars', speaker: 'Speaker', place: 'Venue',
@@ -248,7 +248,7 @@
         ${(p.bullets || []).length ? `<h2 class="block-title">${T.highlights}</h2><dl class="dl">${p.bullets.map(b => `<dt>${esc(b.label)}</dt><dd>${esc(b.text)}</dd>`).join('')}</dl>` : ''}
         ${d && d.activities ? `<h2 class="block-title">${T.activities}</h2><ul class="bullets">${d.activities.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
         ${d && d.awards ? `<h2 class="block-title">${T.awards}</h2><ul class="bullets">${d.awards.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
-        <p class="source-note">${T.source}</p>`;
+        <p class="source-note">${esc(p.source || T.source)}</p>`;
     },
 
     'fellow-detail'(el) {
@@ -266,15 +266,15 @@
             <p class="meta">InnoCORE Fellow · ${esc((f.subs || []).map(T.sub).join(', '))}</p>
             <dl class="dl">
               <dt>${T.field}</dt><dd>${esc(f.keyword)}</dd>
-              ${mentors.length ? `<dt>${T.mentors}</dt><dd>${mentors.map(m => `<a href="${profileUrl(m)}">${esc(nameOf(m))}</a>`).join(', ')}</dd>` : ''}
+              ${mentors.length ? `<dt>${mentors.length > 1 ? T.mentors : T.mentor}</dt><dd>${mentors.map(m => `<a href="${profileUrl(m)}">${esc(nameOf(m))}</a>`).join(', ')}</dd>` : ''}
             </dl>
             ${cv}
           </div>
         </div>
         <h2 class="block-title">${T.fellowCareer}</h2>
         ${timeline(f.career || [])}
-        <h2 class="block-title">${T.outputs}</h2>
-        <ul class="bullets">${(f.outputs || []).map(t => `<li>${esc(t)}</li>`).join('')}</ul>`;
+        ${(f.outputs || []).length ? `<h2 class="block-title">${T.outputs}</h2>
+        <ul class="bullets">${f.outputs.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}`;
     },
 
     'infra-cards'(el) {

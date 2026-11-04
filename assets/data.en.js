@@ -98,9 +98,10 @@ window.SITE_EN = {
       "nameEn": "Bong Hoon Kim",
       "unit": "Department of Robotics and Mechatronics Engineering",
       "title": "Associate Professor",
-      "degree": "Ph.D., KAIST (2012)",
-      "lab": "Beyond-Human Robotics Lab",
-      "keyword": "Humanoids and bioelectronic devices",
+      "degree": "Ph.D., Materials Science and Engineering, KAIST (2012)",
+      "lab": "BH Robotics",
+      "keyword": "Robotics",
+      "source": "Source: Submitted by the researcher (Nov 2026) and research center presentation (May 2026).",
       "bullets": [
         {
           "label": "Publications",
@@ -178,26 +179,31 @@ window.SITE_EN = {
       "id": "hwang-minho",
       "nameEn": "Minho Hwang",
       "unit": "Department of Robotics and Mechatronics Engineering",
-      "title": "Assistant Professor",
-      "degree": "Ph.D., Mechanical Engineering, KAIST (2018)",
+      "title": "Associate Professor",
+      "degree": "Ph.D., Mechanical Engineering, KAIST (2017)",
       "lab": "Surgical Robotics and Precision Manipulation Laboratory (SurGLab)",
-      "keyword": "AI-based surgical robotics and precision manipulation",
+      "keyword": "Physical AI for Surgical Robotics, Autonomous Precision Manipulation, and Robot Learning & Control",
+      "source": "Source: Submitted by the researcher (Nov 2026).",
       "bullets": [
         {
           "label": "Publications",
-          "text": "18 SCI-indexed papers and 21 international conference papers (h-index 21)"
+          "text": "18 SCI(E)-indexed international journal papers and 21 international conference papers (h-index 22)"
         },
         {
           "label": "Patents",
-          "text": "21 registered, 3 filed"
+          "text": "23 domestic and international patents (20 registered, 3 filed)"
         },
         {
           "label": "Professional service",
-          "text": "Editorial Board Member, UMRCAS"
+          "text": "Editorial Advisory Board, IJMRCAS (2023–present); Program Chair, ACCAS (2021–2022); Reviewer, IEEE RA-L/ICRA/IROS/T-ASE/TMECH"
         },
         {
           "label": "Awards",
-          "text": "Winner of an international surgical robotics competition; Grand Prize at a robot challenge; 6 Outstanding Paper Awards; Top 10 Mechanical Technologies of the Year"
+          "text": "Minister of Trade, Industry and Energy Award (2026 Humanoid Challenge); 1st place, ICRA 2026 AI for Robotic Surgery Competition; Surgical Robot Challenge 2018 Overall Winner and Best Application Award; selected for Korea's Top 10 Mechanical Technologies of 2019"
+        },
+        {
+          "label": "Previous positions",
+          "text": "Postdoctoral Researcher, EECS, UC Berkeley (2019–2021); Visiting Scholar, ECE, UC San Diego (2025)"
         }
       ]
     },
@@ -304,19 +310,20 @@ window.SITE_EN = {
     {
       "id": "lee-hyunki",
       "nameEn": "Hyunki Lee",
-      "unit": "Division of Intelligent Robot",
-      "title": "Researcher",
+      "unit": "AX Research Group for Robotics",
+      "title": "Principal Researcher",
       "degree": "Ph.D., Mechanical Engineering, KAIST (2010)",
       "lab": "Camera Culture Group (CCG)",
-      "keyword": "Vision and control",
+      "keyword": "AI-based Optical Imaging System",
+      "source": "Source: Submitted by the researcher (Nov 2026).",
       "bullets": [
         {
           "label": "Publications",
-          "text": "22 SCI-indexed papers"
+          "text": "23 SCI-indexed papers (h-index 9)"
         },
         {
           "label": "Patents",
-          "text": "86 registered (36 international)"
+          "text": "91 registered (29 international)"
         },
         {
           "label": "Professional service",
@@ -325,6 +332,10 @@ window.SITE_EN = {
         {
           "label": "Awards",
           "text": "Minister of Science and ICT Citation (2025)"
+        },
+        {
+          "label": "Research projects",
+          "text": "Carried out 35 research projects, including those funded by the Ministry of Trade, Industry and Energy, the Ministry of Culture, Sports and Tourism, and the Ministry of Science and ICT"
         }
       ]
     },
@@ -569,24 +580,69 @@ window.SITE_EN = {
   ],
   "fellows": [
     {
-      "id": "sample",
-      "name": "Gildong Hong",
-      "keyword": "Emergent intelligence-based robot control (sample)",
+      "id": "prada-john",
+      "name": "John Prada",
+      "keyword": "Reinforcement Learning and Intelligent Decision-Making for Autonomous Robotic Manipulation and Grasping",
       "career": [
         {
           "period": "2026 –",
-          "text": "InnoCORE Fellow, DGIST (sample)"
+          "text": "InnoCORE Fellow, DGIST"
+        },
+        {
+          "period": "2024 – 2026",
+          "text": "Postdoctoral Researcher, DGIST"
+        },
+        {
+          "period": "2018 – 2024",
+          "text": "Ph.D., Robotics and Mechatronics Engineering, DGIST"
+        },
+        {
+          "period": "2016 – 2018",
+          "text": "M.S., Robotics and Mechatronics Engineering, DGIST"
+        },
+        {
+          "period": "2010 – 2015",
+          "text": "B.S., Mechatronics Engineering, New Granada Military University (Colombia)"
+        }
+      ]
+    },
+    {
+      "id": "shirzad-masoud",
+      "name": "Masoud Shirzad",
+      "keyword": "Soft Robotics, AI and Machine Learning, Robotic Metamaterials",
+      "career": [
+        {
+          "period": "Aug 2026 –",
+          "text": "InnoCORE Fellow, DGIST"
+        },
+        {
+          "period": "Mar 2026 – Jul 2026",
+          "text": "Postdoctoral Researcher, Pukyong National University"
+        },
+        {
+          "period": "Mar 2022 – Feb 2026",
+          "text": "Ph.D., Industry 4.0 Convergence Bionics Engineering, Pukyong National University"
+        }
+      ]
+    },
+    {
+      "id": "jeon-hyeonjae",
+      "name": "Hyeonjae Jeon",
+      "keyword": "Vision-Language-Action (VLA) models",
+      "career": [
+        {
+          "period": "2026 –",
+          "text": "InnoCORE Fellow, DGIST"
         },
         {
           "period": "2021 – 2026",
-          "text": "Ph.D., Mechanical Engineering, OO University (sample)"
+          "text": "Ph.D., Department of Robotics and Mechatronics Engineering, Daegu Gyeongbuk Institute of Science and Technology (DGIST)"
+        },
+        {
+          "period": "– 2021",
+          "text": "B.S., School of Undergraduate Studies, College of Transdisciplinary Studies, Daegu Gyeongbuk Institute of Science and Technology (DGIST)"
         }
-      ],
-      "outputs": [
-        "Paper title, journal name (year) (sample)",
-        "Patent or award (sample)"
-      ],
-      "cv": "assets/cv/sample-cv.en.pdf"
+      ]
     }
   ],
   "subprojects": [
@@ -900,7 +956,7 @@ window.SITE_EN = {
         },
         {
           "src": "assets/img/infra/dgist-02.webp",
-          "caption": "Beyond-Human Robotics Lab"
+          "caption": "BH Robotics"
         },
         {
           "src": "assets/img/infra/dgist-04.webp",
